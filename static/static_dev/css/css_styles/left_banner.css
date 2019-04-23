@@ -1,0 +1,46 @@
+@import url("project.css");
+
+.for_left_banner{
+    margin-top: 3vw;
+    box-sizing: border-box;
+    position: fixed;
+}
+#_super_action{
+    position:absolute;
+    margin-left:6.2vw;
+    box-sizing: border-box;
+    height: 30vw;
+    width: 17vw;
+}
+#_super_text{
+    font-size:1.4vw;
+    font-weight: bold;
+    font-variant: small-caps;
+    color: black;
+    text-align: center;
+    margin-left:11vw;
+    position: absolute;
+}
+#_minus{
+    position: absolute;
+    max-width: 7vw;
+    margin-top:2.5vw;
+    margin-left:5vw;
+}
+#_minus_num {
+    position: absolute;
+    margin-top:2.70vw;
+    margin-left: 5.7vw;
+    font-size: 1.4vw;
+    color: white;
+    text-shadow: 3px 3px 1px black;
+}
+#_super_title{
+    position: absolute;
+    color:black;
+    font-size: 1.7vw;
+    text-shadow: 2px 2px 2px gainsboro;
+    margin-top:25vw;
+    margin-left:8vw;
+    text-align: center;
+}

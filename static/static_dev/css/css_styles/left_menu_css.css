@@ -1,0 +1,15 @@
+@import url("project.css");
+.left_menu{
+    margin-top: 1vw;
+    margin-left:-1.6vw;
+    box-sizing: border-box;
+    width:8vw;
+    position:fixed;
+    z-index: 3;
+}
+.left_side{
+    background-color: peru;
+    border: 0.15vw solid grey;
+    border-left: 0.3vw solid grey;
+    box-sizing: border-box;
+}

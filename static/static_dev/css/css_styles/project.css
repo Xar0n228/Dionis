@@ -1,0 +1,207 @@
+
+/*html{*/
+    /*height: auto !important;*/
+/*}*/
+/*.css-adaptive{*/
+    /*display:block;*/
+    /*width: 100%;*/
+    /*height: auto;*/
+/*}*/
+/*Landing_top*/
+
+/*#################*/
+.text{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1vw;
+    font-style:italic;
+    font-variant:small-caps;
+    color: darkgoldenrod;
+    text-shadow: 3px 4px 3px black;
+}
+.for_top_content{
+    background-color: darkslategrey;
+    height: 14vw;
+    position: fixed;
+    z-index: 1;
+    padding-bottom:14vw;
+}
+.for_main_content{
+    margin-top:14vw;
+    background-color: blanchedalmond;
+    min-height: auto;
+    padding-bottom: 10vw;
+    /*min-height: calc(100vw - 1200px);*/
+    /*position: relative;*/
+}
+
+/*############################################################################*/
+.towar-cont{
+    margin-top: 1vw;
+}
+#_litle_img{
+    width: 38vw;
+    border-radius: 5vw 3.8vw 2.6vw 1.6vw;
+}
+.details{
+    background-color: #205067;
+    border-radius: 1vw;
+    margin-top:1vw;
+    width: 22vw;
+    box-sizing: border-box;
+    position: relative;
+    margin-left: 8vw;
+    height: auto;
+    line-height: 2.5vw;
+    font-size: 2vw;
+    max-height: 23vw;
+    text-overflow: ellipsis;
+}
+.text_det{
+    list-style-type: none;
+}
+.for-str{
+    color: darkgoldenrod;
+    text-shadow: 2px 2px 2px black;
+}
+#_category_key{
+    font-size: 1.7vw;
+    text-align: left;
+    margin-left: -1.5vw;
+    margin-top: 1.5vw;
+}
+#_name{
+    font-size: 1.5vw;
+    text-align: center;
+    margin-left: -3vw;
+}
+#_status{
+    text-align: left;
+    font-size: 1vw;
+    margin-top: -1vw;
+}
+
+#_ves{
+    text-align: left;
+    margin-left: -2vw;
+    font-size: 0.8vw;
+    margin-top: 1vw;
+}
+#_description{
+    font-size: 1vw;
+    text-align: left;
+    margin-left: -2.8vw;
+    margin-right: -0.74vw;
+    background-color: #062c33;
+    min-height: 11.6vw;
+    border-radius: 0 0 1vw 1vw;
+    padding:1vw;
+    z-index: 1;
+}
+#_zena_class{
+    z-index: 20;
+}
+#_zena{
+    font-size: 1.5vw;
+    margin-left: 40.3vw;
+    border-radius: 0 6vw 6vw 1vw;
+    background-color: #04B486;
+    margin-top: -6.2vw;
+    padding: 0.5vw;
+}
+/*############################################################################*/
+.for_buy{
+    margin-left:20.5vw;
+    margin-top: 1vw;
+}
+#_colvo{
+    background-color: #0B3B39;
+    text-shadow: 2px 2px 2px black;
+    color: darkgoldenrod;
+    padding: 0.9vw 3vw 0.9vw 0.9vw;
+    border-radius: 1vw;
+    margin-top: 0.5vw;
+    font-weight: bold;
+    margin-left: 6vw;
+}
+#_number{
+    margin-left: -2.5vw;
+    height: 2.6vw;
+    width: 10vw;
+    border-radius: 1vw;
+    z-index: 1;
+}
+#_submit_btn{
+    text-shadow: 2px 2px 2px black;
+    color: darkgoldenrod;
+    margin-left:0.1vw;
+    height: 5vw;
+    width: 10vw;
+    border-radius: 2vw;
+    font-size: 2vw;
+}
+/*.towar-image-item{*/
+    /*width: 37vw;*/
+/*}*/
+
+/*.navbar-top{*/
+    /*min-height: 50px;*/
+    /*height: 20vw;*/
+    /*background-color: green;*/
+    /*border:none;*/
+    /*border-radius: 0;*/
+/*}*/
+/*.navbar-main{*/
+    /*background-color: #0f6674;*/
+    /*border:none;*/
+    /*border-radius: 0;*/
+/*}*/
+
+/*.basket-container{*/
+    /*position: relative;*/
+/*}*/
+
+/*.basket-container{*/
+    /*position: relative;*/
+/*}*/
+/*.basket-items{*/
+    /*position: absolute;*/
+    /*top:0%;*/
+    /*width: 100%;*/
+/*}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

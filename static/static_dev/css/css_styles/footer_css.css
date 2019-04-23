@@ -1,0 +1,33 @@
+@import url("project.css");
+.for_foot_content{
+    background-color: #2A1B0A;
+    min-height: calc(100vw - 74vw);
+    max-height: calc(100vw - 74vw);
+
+    position: relative;
+    /*float:bottom;*/
+}
+#_emblem{
+    position: absolute;
+    width:27vw;
+}
+#_main_title_foot{
+    font-family: 'Srisakdi', cursive;
+    font-size: 4vw;
+    color: darkgoldenrod;
+    text-shadow: 4px 7px 3px black;
+    position: absolute;
+    margin-top: 9vw;
+    margin-left: 6vw;
+}
+.foot_title{
+    position: absolute;
+    font-size: 1.7vw;
+    margin-top: -2vw;
+    margin-left:-2vw;
+}
+.company{
+    margin-top: 12vw;
+    line-height: 0.7vw;
+    position: relative;
+}

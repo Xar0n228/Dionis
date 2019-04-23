@@ -1,0 +1,89 @@
+.basket-title{
+    text-shadow: 2px 2px 2px black;
+    color: darkgoldenrod;
+    margin-top:1vw;
+    width: 30vw;
+    text-align: center;
+    margin-left: 23.7vw;
+    /*border-radius: 2vw;*/
+    font-size: 2.5vw;
+}
+.full-data{
+    height: 20vw;
+    background-color: #0B3B2E;
+    border-radius: 2vw;
+    position: relative;
+    margin-bottom: 2.5vw;
+    margin-left: 7vw;
+}
+.image-tow-basket #_litle_img{
+    margin-left: -9vw;
+    margin-top: 1vw;
+    width: 18vw;
+    height: 18vw;
+    position: absolute;
+    border-radius: 2vw;
+}
+.data-tow-basket{
+    font-size: 1vw;
+    margin-bottom: 4vw;
+    background-color: #088A85;
+    color: darkgoldenrod;
+    text-shadow: 2px 2px 2px black;
+    border-radius: 1vw;
+}
+.towar-cat{
+    font-size: 1.3vw;
+    margin-top: 0.4vw;
+    text-align: center;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+.towar-name {
+    text-align: center;
+    margin-top: -0.5vw;
+}
+.data-tow-descr{
+    background-color: #0B615E;
+    font-size: 1vw;
+    text-align: left;
+    color: darkgoldenrod;
+    text-shadow: 2px 2px 2px black;
+    border-radius: 1vw 1vw 2vw 1vw;
+    margin-top: 4vw;
+    margin-left: 4.7vw;
+}
+#_for_opis{
+    text-align: center;
+    margin-top:1vw;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

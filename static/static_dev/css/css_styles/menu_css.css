@@ -1,0 +1,31 @@
+@import url("project.css");
+.for_menu_content{
+    background-color: burlywood;
+    height: 23vw;
+}
+#_menu_title{
+    font-size: 1.8vw;
+    color:black;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bolder;
+    text-shadow: 3px 3px 3px #585858;
+}
+.menu_but{
+    margin-top:3vw;
+    width: 1vw;
+}
+.menu_cont{
+    box-sizing: padding-box;
+    position: relative;
+    width: 14vw;
+    margin-right: 2vw;
+    margin-left: 0.5vw;
+}
+.menu{
+    position: absolute;
+    border: solid 0.2vw #848484;
+    width: 12vw;
+    margin-top: 1vw;
+}
+

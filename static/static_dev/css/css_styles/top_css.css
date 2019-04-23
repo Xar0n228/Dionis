@@ -1,0 +1,129 @@
+@import url("project.css");
+
+#_main_title{
+    font-family: 'Srisakdi', cursive;
+    font-size: 4vw;
+    color: darkgoldenrod;
+    margin-top:6vw;
+    text-shadow: 4px 7px 3px black;
+}
+.for_main_title{
+    box-sizing:border-box;
+    margin-left:0.6vw;
+    margin-right:-4vw;
+}
+
+.for_top{
+    position: relative;
+}
+.column{
+    position:absolute;
+    height: 7vw;
+    margin-top: 1vw;
+}
+#_left_column, #_right_column{
+    height: 13vw;
+}
+#_nash_adr{
+    margin-top: 3vw;
+    margin-left: -4vw;
+}
+
+
+
+
+/*########################################################################*/
+.for_bag{
+    max-width: 20vw;
+    margin-top: 6vw;
+    /*margin-bottom: 5vw;*/
+    box-sizing: border-box;
+}
+#_wash_zakaz{
+    font-size:2vw;
+    font-family: 'Srisakdi', cursive;
+    text-shadow: 4px 7px 3px black;
+    color: darkgoldenrod;
+}
+#_wash_total{
+    font-size:1.2vw;
+    color: darkgoldenrod;
+    background-color: darkred;
+    text-align: center;
+    margin-left:3.2vw;
+    border-radius: 10px;
+    margin-top: -3.5vw;
+    width: 1.5vw;
+    text-shadow: 2px 3px 2px black;
+    z-index: 30;
+    position: absolute;
+}
+#_basket_h{
+    background-color: #0B3B39;
+    height: auto;
+    border-radius: 0.7vw;
+    position: fixed;
+    z-index: 60;
+    width: 18vw;
+    margin-top: -0.8vw;
+}
+.for-hidden{
+    list-style-type: none;
+}
+.items-li{
+    font-size:1vw;
+    color: darkgoldenrod;
+    text-shadow: 2px 3px 2px black;
+    position: relative;
+    z-index: 61;
+}
+/*.basket-items.hidden{*/
+    /*z-index: 60;*/
+    /*height: auto;*/
+    /*position: fixed;*/
+    /*margin-right: 3vw;*/
+    /*!*margin-top: 15vw;*!*/
+
+/*}*/
+
+
+
+/*#_basket_h{*/
+    /*background-color: #0B3B39;*/
+    /*height: auto;*/
+    /*position: fixed;*/
+    /*z-index: 47;*/
+/*}*/
+
+/*.for-hidden{*/
+    /*margin-top: 1vw;*/
+    /*z-index: 47;*/
+    /*background-color: #0B3B39;*/
+    /*list-style-type: none;*/
+
+    /*position: relative;*/
+/*}*/
+/*#_items_li{*/
+    /*font-size:1vw;*/
+    /*color: darkgoldenrod;*/
+    /*text-shadow: 2px 3px 2px black;*/
+    /*margin-left:-1.3vw;*/
+    /*margin-top: 1vw;*/
+    /*z-index: 59;*/
+    /*position: absolute;*/
+/*}*/
+
+
+
+/*.basket-items{*/
+    /*position: absolute;*/
+    /*!*top:3vw;*!*/
+    /*width: 17vw;*/
+    /*height: auto;*/
+    /*background-color: #0B3B39;*/
+    /*z-index: 10;*/
+    /*padding: 1.2vw;*/
+    /*margin-right: 3vw;*/
+    /*margin-top: 0.3vw;*/
+    /*border-radius: 1vw;*/
+/*}*/
