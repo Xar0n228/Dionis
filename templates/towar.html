@@ -1,0 +1,96 @@
+{#{% extends 'base.html' %}#}
+{% load static %}
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="{% static 'css/css_styles/project.css' %} ">
+
+{#{% block main_content %}#}
+<div class="container-fluid towar-cont">
+    <div class="row">
+{#            <div class="col-xs-3">#}
+{##}
+{#            </div>#}
+        <div class="col-xs-6 towar-image-item">
+            <span id="_image_">{{ towar_view.image_img }}</span>
+
+        </div>
+        <div class="col-xs-3 details">
+            <ul class="text_det">
+                <li class="for-str" id="_category_key">{{ towar_view.category_new.category_key}}</li>
+                <li class="for-str" id="_name">{{ towar_view.name }}</li>
+                <li class="for-str" id="_status">{{ towar_view.status }}</li>
+                <li class="for-str" id="_ves">Вес: {{ towar_view.ves }} гр.</li>
+                <li class="for-str" id="_description"><p id="_text_descr">{{ towar_view.description }}</p></li>
+            </ul>
+        </div>
+        <div id="_zena_class">
+            <p class="for-str" id="_zena">Цена: {{ towar_view.zena }} грн.</p>
+        </div>
+        <div class="for_buy">
+                <form id="_form_buying_product" class="form-inline" action="{% url 'orders_name:add_to_order' %}">{% csrf_token %}
+{#                        автоматически создаёт input с классом hidden, где записан нужный код, который нужен джанго.#}
+{#                        Чтобы джанго при пост-запросе сверял код с тем, который у него сохранён в Б.Д. Чтобы пост-запрос пришёл только#}
+{#                        с той страницы, который отрисован в джанго. #}
+                    <div class="form-group">
+                        <p id="_colvo">кол-во</p><input type="number" class="form-control" name="number" id="_number">
+                    </div>
+
+
+                    <div class="form-group">
+                        <button type="submit" id="_submit_btn" class="btn btn-success btn-buy"
+{#                                    дата-атрибут, который можно будет считывать. Например через AJAX#}
+                                data-towar_id = "{{ towar_view.pk }}"
+                                data-name ="{{  towar_view.name }}"
+                                data-price ="{{  towar_view.zena }}"
+                        >
+                            Добавить
+                        </button>
+                    </div>
+                </form>
+        </div>
+{#                <div id="_item_type">#}
+{#                    {{ towar_view.category_new.category_key}}#}
+{#                </div>#}
+{#                <div id="_item_id">#}
+{#                    {{ towar_view.id }}#}
+{#                </div>#}
+{#                <div id="_item_status">#}
+{#                    {{ towar_view.status }}#}
+{#                </div>#}
+{#                <div id="_item_zena">#}
+{#                    {{ towar_view.zena }}#}
+{#                </div>#}
+{#                <div id="_item_name">#}
+{#                    {{ towar_view.name }}#}
+{#                </div>#}
+{#                <div id="_item_ves">#}
+{#                    {{ towar_view.ves }}#}
+{#                </div>#}
+{#                <div id="_item_descr">#}
+{#                    {{ towar_view.description }}#}
+{#                </div>#}
+{#                <div class="for_buy">#}
+{#                    <form id="_form_buying_product" class="form-inline" action="{% url 'orders_name:add_to_order' %}">{% csrf_token %}#}
+{#                        автоматически создаёт input с классом hidden, где записан нужный код, который нужен джанго.#}
+{#                        Чтобы джанго при пост-запросе сверял код с тем, который у него сохранён в Б.Д. Чтобы пост-запрос пришёл только#}
+{#                        с той страницы, который отрисован в джанго. #}
+{#                        <div class="form-group">#}
+{#                            <input type="number" class="form-control" name="number" id="_number">#}
+{#                        </div>#}
+{##}
+{##}
+{#                        <div class="form-group">#}
+{#                            <button type="submit" id="_submit_btn" class="btn btn-success btn-buy"#}
+{#                                    дата-атрибут, который можно будет считывать. Например через AJAX#}
+{#                                    data-towar_id = "{{ towar_view.pk }}"#}
+{#                                    data-name ="{{  towar_view.name }}"#}
+{#                                    data-price ="{{  towar_view.zena }}"#}
+{#                            >#}
+{#                                Купить#}
+{#                            </button>#}
+{#                        </div>#}
+{#                    </form>#}
+{#                </div>#}
+
+    </div>
+</div>
+{#{% endblock main_content %}#}

@@ -1,0 +1,40 @@
+"""SERVER URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/2.1/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+from django.contrib import admin
+from django.urls import path, re_path, include
+
+from django.conf import settings
+from django.conf.urls.static import static
+
+
+# from PAGE.models import *
+# from PAGE.views import PPage
+# admin.autodiscover()
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('PAGE.urls')),
+    path('', include('TOWARS.urls')),
+    path('', include('ORDER.urls')),
+    # re_path(r'^home/$', PPage.as_view(page_file='HTML_MAIN_PAGE/landing_main.html'),  name='page_link'),
+    # re_path(r'^pizza_menu/$', PPage.as_view(page_file='HTML_MAIN_PAGE/pizza_menu_p.html'), name='pizza_men'),
+    # re_path(r'^sushi_menu/$', PPage.as_view(page_file='HTML_MAIN_PAGE/sushi_menu_p.html'),  name='sushi_men'),
+    # re_path(r'^burgers_menu/$', PPage.as_view(page_file='HTML_MAIN_PAGE/burger_menu_p.html'),   name='burger_men'),
+    # re_path(r'^drinks_menu/$', PPage.as_view(page_file='HTML_MAIN_PAGE/drink_menu_p.html'),  name='drink_men'),
+    # re_path(r'^alcohol_menu/$', PPage.as_view(page_file='HTML_MAIN_PAGE/alcohol_menu_p.html'),   name='alcohol_men'),
+]\
+                + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
+                + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

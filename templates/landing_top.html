@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/css_styles/top_css.css' %} ">
+
+{#<link rel="stylesheet" href="{% static 'css/project.css' %} ">#}
+{#{% block top_content %}#}
+
+<div class="container-fluid for_top_content" >
+
+    <div class="row">
+        <div class="col-xs-2 col-xs-offset-1 ">
+            <p id="_nash_adr" class="text">Наш адресс: г. {{ admin_data.our_city }}, ул. {{ admin_data.our_street }}</p>
+        </div>
+        <div class="col-xs-1 col-xs-offset-1 for_top" >
+            <img id="_left_column" src="{% static 'images/left_column.svg' %}" class="img-fluid css-adaptive column" alt="Responsive image">
+        </div>
+        <div class="col-xs-2 for_main_title">
+            <p id="_main_title">{{ admin_data.main_title }}</p>
+        </div>
+        <div class="col-xs-1 for_top" >
+            <img id="_right_column" src="{% static 'images/right_column.svg' %}" class="img-fluid css-adaptive column" alt="Responsive image">
+        </div>
+        <div class="col-xs-2 col-xs-offset-2 for_bag">
+{#        {% include 'basket.html' %}#}
+{#        {% block for_basket %}#}
+{#        {% endblock for_basket %}#}
+            <div id="_basket_nh" class="basket-container ">
+                <div class="not-hidden">
+                    <a id="_wash_zakaz" href="{% url 'orders_name:basket_checkout' %}" class="active"> {% csrf_token %}
+                        <p >Ваш заказ </p>
+                        <span id="_basket_total_nmb">
+    {#                !!!!!!!!!ПОДОЗРИТЕЛЬНЫЙ id#}
+                            {% if towars_total_nmb %}
+        {#                        !!!!!!ВАЖНО И ОУХЕННО!!!!!!#}
+        {#                        можем подставить сюда одну из переменных, которые мы определили в application: context_processor#}
+        {#                        т.к. она доступна на всех страницах. И не надо подключать через admin_data и т.п.#}
+                                <p id="_wash_total">{{ towars_total_nmb }}</p>
+                            {% else %}
+                                (0)
+                            {% endif %}
+    {#                {{ for_total_price }}   ПОТОМ ПОПРОБУЙ ДОБАВИТЬ#}
+                        </span>
+                    </a>
+                </div>
+                <div id="_basket_h" class="basket-items hidden">
+                    <ul class="for-hidden">
+{#                        hidden?#}
+                        {% for towar_in_order in towars_in_order %}
+                            <li class="items-li">
+                                {{ towar_in_order.towar.name }} {{ towar_in_order.count }} шт.
+                                по {{ towar_in_order.one_price }} грн.
+{#                                <a class="delete-item" href="" data-towar_id="{{ towar_in_order.id }}">x</a>#}
+                                <a class="delete-item" href="" data-towar_id="{{ towar_in_order.id }}">x</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+{#{% endblock %}#}

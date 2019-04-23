@@ -1,0 +1,30 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="{% static 'css/css_styles/menu_css.css' %} ">
+
+<div class="container-fluid for_menu_content">
+    <div class="row">
+        <div class="col-xs-4 col-xs-offset-4">
+            <p id="_menu_title">Меню доставки:</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-1 col-xs-offset-2" >
+            <img id="_left_button_menu " src="{% static 'images/left_button.svg' %}" class="img-fluid menu_but css-adaptive" alt="Responsive image">
+        </div>
+        <div class="col-xs-2 menu_cont" >
+            <img id="_pizza " src="{% static 'images/menu/pizza.jpg' %}" class="img-fluid menu css-adaptive" alt="Responsive image">
+        </div>
+        <div class="col-xs-2 menu_cont" >
+            <img id="_sushi " src="{% static 'images/menu/sushi.jpg' %}" class="img-fluid menu css-adaptive" alt="Responsive image">
+        </div>
+        <div class="col-xs-2 menu_cont" >
+            <img id="_drinks " src="{% static 'images/menu/drinks.jpg' %}" class="img-fluid menu css-adaptive" alt="Responsive image">
+        </div>
+        <div class="col-xs-1" id="_right_button_menu" >
+            <img src="{% static 'images/right_button.svg' %}" class="img-fluid menu_but css-adaptive" alt="Responsive image">
+        </div>
+    </div>
+</div>

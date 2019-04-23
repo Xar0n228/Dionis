@@ -1,0 +1,33 @@
+
+{% load static %}
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="{% static 'css/css_styles/left_menu_css.css' %} ">
+<div class="container-fluid left_menu">
+    <aside>
+        {#                <button type="button" #}
+        <a href="{% url 'page_name:page_for_menu' for_page_type='pizza' %}" class="active"> {% csrf_token %}
+            <img id="_pizza" src="{% static 'images/left_menu_icons/pizza.svg' %}" class="img-fluid left_side css-adaptive" alt="Responsive image">
+        </a>
+
+        <a href="{% url 'page_name:page_for_menu' for_page_type='sushi' %}" class="active"> {% csrf_token %}
+            <img id="_sushi" src="{% static 'images/left_menu_icons/sushi.svg' %}" class="img-fluid left_side css-adaptive" alt="Responsive image">
+        </a>
+
+        <a href="{% url 'page_name:page_for_menu' for_page_type='burger' %}" class="active"> {% csrf_token %}
+            <img id="_hamburger" src="{% static 'images/left_menu_icons/hamburger.svg' %}" class="img-fluid left_side css-adaptive" alt="Responsive image">
+        </a>
+
+        <a href="{% url 'page_name:page_for_menu' for_page_type='drink' %}" class="active"> {% csrf_token %}
+            <img id="_drinks" src="{% static 'images/left_menu_icons/drinks.svg' %}" class="img-fluid left_side css-adaptive" alt="Responsive image">
+        </a>
+
+        <a href="{% url 'page_name:page_for_menu' for_page_type='alcohol' %}" class="active"> {% csrf_token %}
+            <img id="_alcohol" src="{% static 'images/left_menu_icons/alcohol.svg' %}" class="img-fluid left_side css-adaptive" alt="Responsive image">
+        </a>
+
+                {#                    <img id="_sushi" src="../static/images/left_menu_icons/sushi.svg" class="img-fluid left_side css-adaptive" alt="Responsive image">#}
+                {#                    <img id="_hamburger" src="../static/images/left_menu_icons/hamburger.svg" class="img-fluid left_side css-adaptive" alt="Responsive image">#}
+                {#                    <img id="_drinks" src="../static/images/left_menu_icons/drinks.svg" class="img-fluid left_side css-adaptive" alt="Responsive image">#}
+                {#                    <img id="_alcohol" src="../static/images/left_menu_icons/alcohol.svg" class="img-fluid left_side css-adaptive" alt="Responsive image">#}
+    </aside>
+</div>

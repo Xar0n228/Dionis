@@ -1,0 +1,10 @@
+{% load static %}
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="{% static 'css/css_styles/left_banner.css' %} ">
+<div class="container-fluid for_left_banner">
+    <img class="img-fluid css-adaptive" id="_super_action" src=" {% static 'images/menu/action_menu/super_action.jpg' %}" alt="Responsive image">
+    <p id="_super_text">Акция дня:</p>
+    <img id="_minus" src=" {% static 'images/minus_red.svg' %} " class="img-fluid css-adaptive" alt="Responsive image">
+    <p  id="_minus_num">- {{ admin_data.super_action }} %</p>
+    <p id="_super_title">{{ admin_data.super_title }} | {{ admin_data.super_title_price }} грн.</p>
+</div>

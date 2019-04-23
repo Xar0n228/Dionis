@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/css_styles/basket.css' %} ">
+    <div class="container-fluid">
+        {% if not towars_in_order %}
+            <p class="text-center basket-title">Ваша корзина пуста</p>
+        {% else %}
+            <p class="text-center basket-title">Ваш заказ:</p>
+            {% for towar_in_order in towars_in_order %}
+                <div class="row full-data">
+                    <div class="col-xs-3 col-xs-offset-2 image-tow-basket">
+                        <span id="_image_towar">{{ towar_in_order.towar.image_img }}</span>
+                    </div>
+                    <div class="col-xs-3 data-tow-basket">
+                        <p class="towar-cat">
+                            {{ towar_in_order.towar.category_new }}
+                        </p>
+                        <p class="towar-name">
+                            {{ towar_in_order.towar.name }}
+                        </p>
+
+                        <p class="towar-ves">
+                             {{ towar_in_order.towar.ves }} гр.
+                        </p>
+                        <p class="towar-zena">
+                            Цена: по {{ towar_in_order.towar.zena }} грн.
+                        </p>
+                        <p class="towar-count">
+                            Количество: {{ towar_in_order.count }} шт
+                        </p>
+    {#                                <input value="{{ towar_in_order.count }}" type="number"#}
+    {#                                       class="towars-in-basket-count" name="towar_in_order_{{ towar_in_order.id }}">#}
+        {#                                                    возвращает в форме переменную имени#}
+                        <p class="towar-price">
+                            Стоимость: {{ towar_in_order.all_price }} грн.
+                        </p>
+                    </div>
+                    <div class="col-xs-3 data-tow-descr">
+                        <p id="_for_opis">Описание: </p>
+                        <p class="towar-descr">
+                            {{ towar_in_order.towar.description }}
+                        </p>
+                    </div>
+
+    {#                            <td>#}
+        {#                                        Для того, чтобы отправлять на обработку в JQUERY даныне о цене, где будет подсчитываться общая цена#}
+    {#                                <span class="total-towar-in-order-amount">#}
+    {#                                    {{ towar_in_order.for_all_price }}#}
+    {#                                </span>#}
+    {##}
+    {#                            </td>#}
+
+        {#                        <li>#}
+
+
+        {#                        </li>#}
+
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    {#                    <h5 class="text-center">Общая стоимость: {{ request.session.basket.total_amount }} грн </h5>#}
+    {#                            {{ request.session.basket.products }}#}
+        {#                <ul>#}
+    {#                    <form class="form-horizontal" method="post"> {% csrf_token %}#}
+        {#                <form class="form-inline" method="post"> {% csrf_token %}#}
+    {#                        {{ form.errors }}#}
+        {#                - это словарь с элементами, который показывает, какие элементы неправильные#}
+        {#                - это объект, которые показывает, какие ошибки есть для какого поля#}
+        {#                каждую эту ошибку можно отобразить по-отдельности#}
+    {#                        <div class="col-xs-5">#}
+    {#                            <div class="form-group">#}
+    {#                                <label>Имя</label>#}
+    {#                                <span class="form-error"> {{ form.name.errors }} </span>#}
+        {#                                  здесь показываем конкретную ошибку для данного поля#}
+    {#                                <input type="text" name="{{ form.name.html_name }}" class="form-control"#}
+    {#                                    value="{{ request.POST.name }}"#}
+        {#                                   Делает так, что даже после обновления страницы и её данных, ввод сохраняется в поле формы#}
+        {#                                   ВАЖНО. Отображает значение, даже если есть ошибка. #}
+        {#                                   Это значит, что request.POST.name будет передавать данное значение во views#}
+    {#                                >#}
+        {#                                        отрисовываем параметр html_name это когда отрисовывается имя как само назв#}
+        {#                                        назваание этого поля#}
+    {##}
+        {#                            ОДНАКО так мы не используем всю мощь форм Django и это ограничивает возможности#}
+        {#                            Чтобы этого избежать, делают так, что эти поля отрисовываются не просто так, а#}
+        {#                            отрисовываются как часть формы Django из файла forms,которая передаётся через#}
+        {#                            views и передаётся в шаблон HTML#}
+        {#                        Инпут на ввод имени клиента#}
+    {#                            </div>#}
+    {#                        </div>#}
+    {#                        <div class="col-xs-6">#}
+    {#                            <div class="form-group">#}
+    {#                                <label>Телефон</label>#}
+    {#                                <span class="form-error"> {{ form.phone.errors }} </span>#}
+    {#                                <input type="text" name="{{ form.phone.html_name }}" class="form-control"#}
+    {#                                    value="{{ request.POST.phone }}"#}
+    {#                                >#}
+        {#                                        отрисовываем параметр html_name для phone #}
+        {#                        Инпут на ввод телефона клиента#}
+    {#                            </div>#}
+    {#                        </div>#}
+                    {#                    ПО ИДЕЕ в DJANGO должно возвращаться в QueryDict#}
+                    {#                            Клиентское имя#}
+                    {#                            Клиентский теелфон#}
+                    {#                            ID экземпляров товаров в корзине#}
+                    {#                            Токен#}
+        {#                нужно написать method="post", чтобы в view мы могли получать request.POST#}
+    {#                        <table class="table text-center">#}
+    {#                            <thead>#}
+    {#                                <tr>#}
+    {#                                    <th>Название товара</th>#}
+    {#                                    <th>Количество</th>#}
+    {#                                    <th>Цена за единицу</th>#}
+    {#                                    <th>Общая цена</th>#}
+    {#                                </tr>#}
+    {#                            </thead>#}
+    {#                            <tbody>#}
+        {#                        Когда мы в цикле создаём новую строку, создаётся новая строка#}
+    {#                                {% for towar_in_order in towars_in_order %}#}
+    {#                                    <tr>#}
+    {#                                        <td>#}
+    {#                                            {{ towar_in_order.order_new.name }}#}
+    {#                                        </td>#}
+    {#                                        <td >#}
+    {#                                            <input value="{{ towars_in_order.count }}" type="number"#}
+    {#                                                   class="towars-in-basket-count" name="towar_in_order_{{ towar_in_order.id }}">#}
+        {#                                                    возвращает в форме переменную имени#}
+    {#                                        </td>#}
+    {#                                        <td>#}
+    {#                                            <span class="towar-price">#}
+    {#                                                {{ towar_in_order.for_one_price }}#}
+    {#                                            </span>#}
+    {#                                        </td>#}
+    {#                                        <td>#}
+        {#                                        Для того, чтобы отправлять на обработку в JQUERY даныне о цене, где будет подсчитываться общая цена#}
+    {#                                            <span class="total-towar-in-order-amount">#}
+    {#                                                {{ towar_in_order.for_all_price }}#}
+    {#                                            </span>#}
+    {##}
+    {#                                        </td>#}
+    {#                                    </tr>#}
+        {#                        <li>#}
+    {##}
+    {##}
+        {#                        </li>#}
+    {#                                {% endfor %}#}
+    {##}
+    {#                            </tbody>#}
+    {#                        </table>#}
+    {#                        <div class="text-right">#}
+    {#                            <b>Сумма заказа:</b> <span id="_total_basket_amount">__</span>#}
+    {#                        </div>#}
+    {#                        <div class="text-right">#}
+    {#                            <button type="submit" class="btn btn-primary btn-lg">Сделать заказ</button>#}
+    {#                        </div>#}
+    {##}
+    {##}
+    {#                    </form>#}
+        {#                </ul>#}

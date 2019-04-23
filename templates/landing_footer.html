@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="{% static 'css/css_styles/footer_css.css' %} ">
+
+
+<div id="ft" class="container-fluid for_foot_content">
+    <div class="row">
+        <div class="col-xs-3 emblem_cont">
+            <img id="_emblem" src="{% static 'images/emblem_rill.svg' %}" class="img-fluid css-adaptive" alt="Responsive image">
+            <p id="_main_title_foot">{{  admin_data.main_title }}</p>
+        </div>
+        <div class="col-xs-2 col-xs-offset-1 company">
+            <p class="text foot_title">Контакты:</p><br>
+            <p class="text">+38 067 771 23 89</p><br>
+            <p class="text">+38 099 674 45 12</p><br>
+            <p class="text">+38 087 893 15 67</p><br>
+            <p class="text">email: {{ admin_data.our_email }}</p><br>
+            <p class="text">inst.: {{ admin_data.our_inst }}</p><br>
+            <p class="text">facebook: {{ admin_data.our_face }}</p><br>
+        </div>
+        <div class="col-xs-2 company">
+            <p class="text foot_title">Компания:</p><br>
+            <p class="text">Новости:</p><br>
+            <p class="text">О нас: </p><br>
+            <p class="text">Вакансии:</p><br>
+        </div>
+        <div class="col-xs-2 company">
+            <p class="text foot_title">Доставка:</p><br>
+            <p class="text">Супер-акции:</p><br>
+            <p class="text">Хит продаж: </p><br>
+            <p class="text">Меню доставки:</p><br>
+            <p class="text">Новинки:</p><br>
+        </div>
+    </div>
+</div>
